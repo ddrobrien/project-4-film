@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 
@@ -15,12 +15,11 @@ class PostList(generic.ListView):
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
-
     def post_detail(request, slug):
         queryset = Post.objects.filter(status=1)
         template_name = 'post_detail.html'
         post = get_object_or_404(Post, slug=slug)
-        comments = post.comments.filter(approved=True)
+        comments = Comment.objects.filter(active=True)
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
