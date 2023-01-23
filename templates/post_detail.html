@@ -9,12 +9,16 @@
         <p class="card-text ">{{ post.content | safe }}</p>
       </div>
     </div>
+    <div class="col-1">
+      <!-- The number of likes goes before the closing strong tag -->
+      <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
+  </div>
     {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
 
     <div class="col-md-8 card mb-4  mt-3 ">
       <div class="card-body">
         <!-- comments -->
-        <h3>{{ comments.count }} comments</h3>
+        <h3>{{ comments.count as total_comments }} comments:</h3>
 
         {% for comment in comments %}
         <div class="comments" style="padding: 10px;">

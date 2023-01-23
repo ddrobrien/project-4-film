@@ -17,9 +17,13 @@ class PostDetail(generic.DetailView):
     template_name = 'post_detail.html'
 
     def post_detail(request, slug):
+        queryset = Post.objects.filter(status=1)
         template_name = 'post_detail.html'
         post = get_object_or_404(Post, slug=slug)
-        comments = post.comments.filter(active=True)
+        comments = post.comments.filter(approved=True)
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
         new_comment = None
     # Comment posted
         if request.method == 'POST':
@@ -35,8 +39,9 @@ class PostDetail(generic.DetailView):
         else:
             comment_form = CommentForm()
 
-        return render(request, template_name, {
+        return render(request, "post_detail.html", {
             'post': post,
             'comments': comments,
+            'liked': liked,
             'new_comment': new_comment,
             'comment_form': comment_form})
