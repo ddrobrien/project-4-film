@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
@@ -40,4 +40,3 @@ def post_detail(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
-                                           
