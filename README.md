@@ -1,108 +1,408 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Film Review - A Django Project
 
-Welcome David O'Brien,
+![The Film Review](media/multiscreen.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This is my fourth milestone project.
+Here is the link for [The Film Review](https://project-4-film-review.herokuapp.com/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+#  Who Is This Website For?
+This webiste has been created for people who like the classic films, the golden oldies. Where they can read the synopsis of a classic film. Users can create an account, leave a comment and join in the conversation. Users also have the opportunity to like specific posts about their absolute favourite films within the Review. 
 
-## Gitpod Reminders
+# UX - User Experience 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The project was planned in 5 stages. 
 
-`python3 -m http.server`
+- Strategy Plane 
 
-A blue button should appear to click: _Make Public_,
+- Scope Plane 
 
-Another blue button should appear to click: _Open Browser_.
+- Structure Plane
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Skeleton Plane
 
-A blue button should appear to click: _Make Public_,
+- Surface Plane 
 
-Another blue button should appear to click: _Open Browser_.
+## The Strategy Plane 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## User Persona
 
-To log into the Heroku toolbelt CLI:
+This webiste is targeted at those people who love a blockbuster film, that everyone has seen, but only true film enthusiasts, love. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## User Goals 
+### Unregistered
+- Be able to navigate the site easily 
+- View the posts on the website 
+- Send a message to the site admin
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Registered (the above and plus+)
+- Be able to register quickly and easily 
+- Like posts
+- Create own comment on the post
 
-------
+### Site Owner Goals
+- Create, View, Update and Delete posts
+- Approve or Disapprove comments from users
+- Delete comments/ratings on the site
+- Blank forms are not sent ("contact us" form)
+- Have a site that is easy and smooth to navigate and learn so that viewers will return in the future to view and engage in more content. 
 
-## Release History
+## User Requirements and Expectations 
+### Requirement
+- Easy to navigate 
+- Content on posts is relevant and interesting to users
+- Easy to locate useful tools such as signin or logout
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Expectations 
+- Expect the navigation links work and direct users where they intend to go
+- Expect to be able to successfully leave a comment (when logged) for authorisation from the admin.
+- Expect feedback when user registers, logs in, logs out
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## User Stories
+These stories have been assigned Low, Medium, or High next to the story to clarify which order the stories are to be prioritized in. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Unregistered Users
+-   As a user I want the site to be easy to navigate
+-   As a user I want to be able to open and view posts
+-   As a user I want to view other site users comments
+-   As a user I want to be able to register an account with ease
+-   As a user I want to be able to send comments, and messages to the site admin
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Registered User (the above and plus+)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+-   As a user I want to be able to like posts
+-   As a user I want to be able to leave comments
+-   As a user I want the site to be relevant and only contain information in a clean way
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Site Admin 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+-   Owner should be able to log into admin account
+-   Owner should be able to create, display, update and delete post
+-   Owner Should be able to approve or delete any comment, regardless of comment age
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Agile Methodology 
+- This application was developed using Agile Methodology. The palnning, design and implementation of the application was created using a project board, where the user stories, or key functions that this application needs are based. The project board contains 3 sections that show various stories that need to be started, in progress or completed. 
+Here is a link to my [ProjectBoard](https://github.com/users/ddrobrien/projects/3/)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### User stories against user goals to be achieve. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+As a site user;
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+**Story**: As a user I want to be able to open a post
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+**Goal**: Be able to to fully read a post if I wish
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+*Priority*: Medium 
 
-------
 
-## FAQ about the uptime script
+**Story**: As a user I want to view a list of posts
 
-**Why have you added this script?**
+**Goal**: View the posts on the website
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+*Priority*: High
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+**Story**: As a user I want to be able register for an account
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+**Goal**: If I like what I see, I want to be able to register for an account to be able to like and leave comments
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+*Priority*: High
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+**Story**: As a user I want view comments, and join in the conversation
 
-**Can I opt out?**
+**Goal**: I want to see other people's opinions on the films I love.  
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+*Priority*: Medium
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+**Story**: As a user I want to be able to comment on a post
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+**Goal**: I want to be able to leave a comment so I can join in the conversation
 
----
+*Priority*: Medium
 
-Happy coding!
+
+**Story**: As a user I want to be able to like posts
+
+**Goal**: Like posts
+
+*Priority*: Low
+
+
+As a Site Admin;
+
+**Story**: Owner should be able to log into account
+
+**Goal**: Have a site that is easy and smooth to navigate and learn so that viewers will return in the future to view and engage in more content.
+
+*Priority*: High
+
+
+**Story**: Owner should be able to create, display, update and delete post
+
+**Goal**: Create, View, Update and Delete posts
+
+*Priority*: High
+
+
+**Story**: Owner Should be able to approve or delete all comments, regardless of comment age. 
+
+**Goal**: 1. Approve or Disapprove comments from users
+
+          2. Delete comments on the site
+
+*Priority*: High
+
+
+# The Scope Plane
+
+The features of this project:
+
+5 pages /
+- Home, Register, Login, Logout
+- Pagination 
+- Film posts 
+- Comments from other site visitors displayed 
+- Comments form for registered user to submit 
+- Crud functionality (Create, Read, Update and Delete) - Applied to the comments model
+- Success messages (Successfully register, login, logout or post comment)
+
+# The Structure Plane 
+
+## Design Thinking 
+I have tried to keep the site features the same, so that whichever page you are on, it looks the same as the page you just visited.
+
+### Blog Features 
+
+- Title header - Displays the site name, which is descriptive of the site for users and visitors. 
+
+![The Title](media/title-image.png)
+
+- Navbar - Responsive and navigates to the Home page, Login or Logout, Register pages. 
+
+![The Navbar](media/navbar-image.png)
+
+- Home page - I have tried to keep the homepage simple, so that users focusonly on the content. Also, no images have been used to avoid any copyright infrindgment.  
+
+![The Homepage](media/homepage.png)
+
+- Register, Login and Logout
+
+![Register](media/register.png)
+![Login](media/signin.png)
+![The Logout](media/logout.png)
+
+
+- Site Pagination - Each page displays up to 3 posts 
+
+![Pagination page 1](media/pagination-1.png)
+![Pagination page 2](media/pagination-2.png)
+
+- Comments form - Visible under the full post for registered users to leave a comment
+
+<img src="media/commentform.png" alt="comments form">
+
+- Comments section for users who are not logged in will not display the form to input. Instead, they are given a link to follow to sign in. 
+
+![Comment Form](media/comment-form.png)
+
+- Posts - The blog posts have an image of the bag, its name, the date the post was created, and an excerpt. The full post contains the actual blog about the bag. 
+
+<img src="media/postouter.png" alt="posts">
+
+- Post when opened - A title of the post followed by the film synopsis 
+
+![Post page](media/post-image.png)
+
+- Likes - A heart for users to click to like a post 
+
+![Likes icon page](media/likes-image.png)
+
+# The Skeleton Plane 
+
+The design of this project was to make a simple application, that is easy to navigate and understand. 
+
+The planning of this project I decided to write lists on what I wanted to achieve in the project and final application. The list is:
+
+- have film posts
+- make them classic/blockbuster films
+- users can read brief intro posts
+- the user cnd decide to read a full post if they wish
+- the user can leave register, log in and log out
+- I wanted the Film Review to have a sign/symbol displayed on every page
+
+![FilmReview Sign](media/filmreviewsign.png)
+
+- I wanted an "About Us" box describing the reason behind the review on the mainpage and full post view page.
+
+![AboutUS](media/aboutus.png)
+
+- I wanted users to be able to comment on posts
+- I wanted users to be able to like posts
+- I wanted to create an admin area
+- In the admin area I wanted the admin to be able to create posts, review posts and comments, update posts and delete posts and comments if they wish. 
+
+# Surface Plane 
+## Design Tools / Colour Palette
+
+I kept the colour choice simple for the Film Review. I used Cooler to keep things simple. 
+
+![Cooler](media/cooler.png)
+
+
+# Testing 
+- CSS test  - pass
+
+- HTML test - pass
+
+- Python check- pass
+
+
+## Bugs 
+There were various bugs I encountered in the writing of this application.
+
+- After creating the the admin area, there was an issue publishing posts and approving comments. THey bought up page failures. Lookng at the views page, and reading the errors on the page break down. The page failed due to the 'approved' input within the string. After changing these to Active and updating the urls.py form, it then worked. 
+
+- Leaving a comment, wouldn't go through to the admin page to be approved. After spending a lot of time speaking to my mentor, and Code Institute Tutor support, the Tutor told me to follow the I love To Blog walkthrough project and copy that code. Once I did that, the comments section worked perfectly. 
+
+- There was an issue with viewing the full post. when users clicked the "read more" button, the post wouldn't load. After consulting Slack, other students helped identify the problem. That now works well. 
+
+- There is still an issue with the Likes button. Which I would fix if I had more time, but due to the deadline, I cannot. 
+
+## Manual Testing 
+- Test all links in Navbar work 
+
+- Test site pagination works  
+
+- Test a Post Model: 
+Posts can be created, displayed, updated, and deleted 
+Check the full post can be read by clicking Read More button
+
+- Test Comments Model: 
+User needs to be logged in to leave a comment
+Comments can be created by the user
+The comment displays 
+Comments once submitted need to be approved 
+
+# Technologies used 
+### Languages
+- HTML5
+- Python 
+- HTML
+- CSS
+
+### Frameworks
+- Django
+- Bootstrap
+
+### Databases
+- PostgreSQL
+
+### Django Extensions
+- All AUTH
+- Summernote 
+- Django Crispy Forms 
+
+### Cloud Storage and Deployment Services 
+- Heroku
+- Gunicorn
+
+# Future implementation 
+- Single sign on using allauth:
+Allowing users to sign in with social media accounts, and link their social media handles to their user site and comments section. 
+
+- Design:
+I would like the design to be more modern, and incoorporate some additional user functionality, like suggestions for future posts. 
+
+- Search options
+I would like registered users to be able to search for their favourite films, especially as more posts are added.  
+
+# Deployment 
+
+## Initial Deployment:
+
+Install django and packages with these commands:
+
+- `pip3 install 'django<4' gunicorn`
+- `pip install dj_database_url psycopg2`
+- `pip3 install dj3-cloudinary-storage pip3 freeze --local > requirements.txt`
+- `django-admin startproject "project_name".`
+- `python3 manage.py startapp "app_name"`
+- `pip3 install django-crispy-forms`
+- Migrate the work using:
+- `python3 manage.py makemigrations --dry-run`
+- `python3 manage.py makemigrations`
+- `python3 manage.py migrate`
+
+Enter command: python3 manage.py runserver to see the preview.
+It should say that django installed successfully.
+
+## Env.py file.
+- Add postgres `DATABASE_URL` and `SECRET_KEY`.
+- Ensure `env.py` is in the `gitignore-file`
+
+## Commit all changes to GitHub.
+- `git add .`
+- `git commit -m "commit message."`
+- `git push`
+
+## Set up deployment with Heroku:
+- Register and login to `Heroku`.
+- Create an app with a unique name and choose the region that is closest to you, USA or Europe.
+- In Heroku/app/resources add postgres and attach it to the database url.
+- Under Settings-> Config vars:
+- Cloudinary is used to store images, therefore a Cloudniary API variable was added to config vars.
+- `DISABLE_COLLECTSTATIC:` This is to prevent accidentally showing debug messages while `DEBUG is True` in `settings.py`
+- Add `port 8000`
+- Add `SECRET_KEY` from the `env.py` file.
+
+- Under Deploy, choose deployment methods `Github` and search for my repository.
+- The branch to deploy should be set to `main`.
+- Deploy branch
+
+
+## Issues with deployment so I followed below commands, deployment then worked.
+- Login to Heroku in terminal
+- `heroku login -i`
+- Provide Heroku username, email and password.
+- `heroku run python3 manage.py migrate --app APP_NAME`
+
+## PostgrSQL as the database for deployment
+- Add the following to the `Settings.py` file: `DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}`
+
+- Set `DEBUG = 'DEVELOPMENT' in os.environ`
+
+- In `env.py` add os.environ['DEVELOPMENT'] = 'True'
+
+- Migrate those changes and push them to `github`.
+
+- Remove `DISABLE_COLLECTSTATIC` in heroku config vars.
+
+# Resources
+- Code Institute- Course material & Tutor support
+- Code Institute- Slack community 
+- W3C- Validate HTML code
+- W3C- CSS Validation 
+- Peps- Python Validation 
+- W3Schools - gave me ideas about About me bar and navigation
+- Django Central- to create a customize html templates and ideas about views and forms. 
+
+# Credits 
+- Django "I think, therefore I blog"  Code Institute Documentation
+
+- Django Central- Building a Blog https://djangocentral.com/building-a-blog-application-with-django/
+
+- Django Central- Comments https://djangocentral.com/creating-comments-system-with-django/ 
+
+- Deployment to Heroku- Django "I think therfore I blog" Code Institute
+
+
+## Special mentions 
+
+Tutor support at Code institute, they were simply brilliant. Didn't stop until this issue was resolved, and did their best to help me understand where I had gone wrong. A special mention to tutor Rebecca, a true life saver. 
+
+Slack community for stopping me from throwing in the towel. I personally found this project difficult, and had many failed attempts. After speaking to the Slack community, they helped me make sense, and also apply for an extension. Without those members, I would hate to think where i would be. 
+
+My mentor Spencer Barriball who assisted as much as he could at every stage. Allowed to vent at him, and also helped by breaking down a large project into tiny tasks. He ensure I planned what I was going to do, and in my opinion, he went above and beyond with me, all while sticking to the rules of course.  
